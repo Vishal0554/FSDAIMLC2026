@@ -1,30 +1,57 @@
-console.log("Hello Using Js");
-//var a = 10;
-//console.log("a=" + a);
+// // console.log("Hello Using Js");
+// // //var a = 10;
+// // //console.log("a=" + a);
 
-// let a = 78;
-// if (a > 50) {
-// let a = 100;
-// console.log("a inside the block=" + a);
-// }
-// console.log("a outside the block=" + a);
-// as an expression
-// const sum=function(a,b){
-//     return a+b;
-// }
-// const data=sum(10,20);
-// console.log("sum=" + data);
-// as an arrow function
-// const msg = (mymsg) => {
-//     console.log("hii" + mymsg);
-// }
-// msg("FSDAIMLC2026");
-// const mysqrt = (val) => 
-//     return math.sqrt(val);
+// // // let a = 78;
+// // // if (a > 50) {
+// // // let a = 100;
+// // // console.log("a inside the block=" + a);
+// // // }
+// // // console.log("a outside the block=" + a);
+// // // as an expression
+// // // const sum=function(a,b){
+// // //     return a+b;
+// // // }
+// // // 
 
-// const result = mysqrt(25);
-// console.log("Result=" + result);
-//let a = 10;
-//let b = 20;
+// // console.log("first")
+// // // setTimeout(() => {console.log("second")}, 1000);
+// // for(i=0;i<1000;i++){
+// //     console.log("second");
+// // }
+// // console.log("third")
+// // setTimeout(() => {
+// //     setTimeout(() => {
+// //         setTimeout(() => {
+// //             console.log("Hello");
+// //         }, 1000);
+// //     }, 1000);
+// // }, 1000);   
+// // promises
+// const myPromise = new Promise((resolve, reject) => {
+//     username = "admin";
+//     password = "admin123";
+//     if (username === "admin" && password === "admin1263") {
+//         resolve("Login successful");
+//     } else {
+//         reject("Invalid credentials");
+//     }
+// });
+// myPromise.then((message) => {
+//     console.log(message);
+// }).catch((message) => {
+//     console.log(message);
+// }).finally(() => {
+//     console.log("All the resources have been closed/memory released successfully");
+// });
+async function handlePromise(){
 
-//console.log("Sum =", a + b);
+
+    try {
+            await myPromise;
+    } catch (error) {
+        console.log(error); 
+    }
+    finally {
+        console.log("All the resources have been closed/memory released successfully");
+    }   
