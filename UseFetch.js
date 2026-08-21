@@ -17,25 +17,28 @@ async function display(){
     // console.log(jsondata[1].title)
     // div.innerHTML=`<h2 style="color:white;background-color:grey;"> ${JSON.stringify(jsondata)}</h2>`;
 
-    let table = `<table border=4px>
-        <tr>
-        <th>image</th>
-        <th>itemId</th>
-        <th>itemTitle</th>
-        <th>itemPrice</th>
-        </tr>
-        ${
-            jsondata.map((ele)=>(
-            `<tr>
-            <td><img src = ${ele.image} heigth = 40 width = 40></td>
-            <td>${ele.id}</td>
-            <td>${ele.title}</td>
-            <td>${ele.price}</td>
-            <td><button onclick = cart(${ele.id})>Add to Cart</button></td>
-            </tr>`
-            ))
-    }
-    </table>`
+  let table = `<table border="4">
+<tr>
+    <th>Image</th>
+    <th>Item ID</th>
+    <th>Item Title</th>
+    <th>Item Price</th>
+    <th>Action</th>
+</tr>
+
+${jsondata.map((ele) => `
+<tr>
+    <td><img src="${ele.image}" height="40" width="40"></td>
+    <td>${ele.id}</td>
+    <td>${ele.title}</td>
+    <td>${ele.price}</td>
+    <td><button onclick="cart(${ele.id})">Add to Cart</button></td>
+</tr>
+`).join("")}
+
+</table>`;
+
+
     div.innerHTML = table;
 
 }catch(e){
